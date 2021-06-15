@@ -1,0 +1,10 @@
+com\UserProfileService\Ram\exception\ExceptionResponse.class
+com\UserProfileService\Ram\controller\ProController.class
+com\UserProfileService\Ram\entity\UserProfileEntity.class
+com\UserProfileService\Ram\repository\UserProfileRepo.class
+com\UserProfileService\Ram\exception\UserExceptions.class
+com\UserProfileService\Ram\globalexceptionAdvice\GlobalExceptionController.class
+com\UserProfileService\Ram\exception\UploadProfileException.class
+com\UserProfileService\Ram\service\UserServiceImpl.class
+com\UserProfileService\Ram\UserProfileServiceApplication.class
+com\UserProfileService\Ram\service\UserService.class
