@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -18,6 +19,9 @@ public class UserServiceImpl implements UserService {
 	private static final Logger LOGGER = LogManager.getLogger(UserServiceImpl.class);
 	@Autowired
 	private UserProfileRepo userProfileRepo;
+	
+	@Autowired
+	private ModelMapper modelMapper;
 
 	@Override
 	public ArrayList<UserProfileEntity> getAllUsers() {
@@ -51,7 +55,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	public UserProfileEntity uploadUser(UserProfileEntity userProfileEntity) {
-
+      
 		LOGGER.info("--------------> Entering  uploadUser");
 		if (userProfileEntity.getUsername() == null || userProfileEntity.getUsername() == ""
 				|| userProfileEntity.getEmail() == null || userProfileEntity.getEmail() == "") {
